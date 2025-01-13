@@ -11,20 +11,17 @@
     <itemQuality>Normal</itemQuality>
     <minGenerationAge>20</minGenerationAge>
     <maxGenerationAge>34</maxGenerationAge>
-    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
-    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 
     <techHediffsChance>0.1</techHediffsChance>
     <techHediffsMoney>500~1000</techHediffsMoney>
-    <backstoryFiltersOverride>
+   <backstoryFiltersOverride>
       <li>
-        <categoriesChildhood>
-            <li>Tribal</li>
-        </categoriesChildhood>
-        <categoriesAdulthood>
-            <li>Tribal</li>
-        </categoriesAdulthood>
+        <categories>
+          <li>Offworld</li>
+          <li>Tribal</li>
+        </categories>
       </li>
     </backstoryFiltersOverride>
     <techHediffsTags>
@@ -79,16 +76,14 @@
     <isFighter>true</isFighter>
       <fixedGender>Male</fixedGender>
       <backstoryFiltersOverride>
-        <li>
-            <categoriesChildhood>
-                <li>Tribal</li>
-            </categoriesChildhood>
-            <categoriesAdulthood>
+      <li>
+        <categories>
+          <li>Tribal</li>
                 <li>Offworld</li>
                 <li>Outlander</li>
                 <li>Outsider</li>
-            </categoriesAdulthood>
-        </li>
+        </categories>
+      </li>
     </backstoryFiltersOverride>
     <requiredWorkTags>
         <li>Violent</li>
