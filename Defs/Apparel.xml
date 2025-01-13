@@ -6,12 +6,14 @@
     <label>bow</label>
     <description>A piece of fabric which covers the wearer's face.</description>
     <techLevel>Neolithic</techLevel>
+	<thingClass>Fallen_angel.NoColorApparel</thingClass>
     <graphicData>
       <texPath>Things/Apparel/shiri_bow/shiri_bow</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.9</drawSize>
     </graphicData>
     <uiIconScale>1.15</uiIconScale>
+	<thingClass>Fallen_angel.NoColorApparel</thingClass>
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
@@ -75,9 +77,12 @@
 	      <graphicClass>Graphic_Single</graphicClass>
 	    
 	    </graphicData>
-	    <costList>
-	        <Cloth>100</Cloth>
-	    </costList>
+		<thingClass>Fallen_angel.NoColorApparel</thingClass>
+	    <costStuffCount>80</costStuffCount>
+		<stuffCategories>
+		<li>Fabric</li>
+		<li>Leathery</li>
+		</stuffCategories>
 	    <thingCategories>
 	      <li>Apparel</li>
 	    </thingCategories>
