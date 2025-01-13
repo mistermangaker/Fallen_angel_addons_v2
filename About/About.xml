@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+<packageId>SWE.fallen_angel_addons</packageId>
+	<name>fallen angel addons</name>
+	<author>sweetheartdraws</author>
+	<url></url>
+	<supportedVersions>
+		<li>1.4</li>
+		<li>1.5</li>
+	</supportedVersions>
+	<description>uwu</description>
+	 <modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+		</li>
+		<li>
+			<packageId>swe.shamiaxenotype</packageId>
+			<displayName>fallen angel xenotype</displayName>
+		</li>
+	</modDependencies>
+
+</ModMetaData>

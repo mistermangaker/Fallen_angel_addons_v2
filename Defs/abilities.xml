@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <AbilityGroupDef>
+    <defName>applyslime</defName>
+    <cooldownTicks>500</cooldownTicks>
+    <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+  </AbilityGroupDef>
+
+
+	 <AbilityDef ParentName="AbilityTouchBase">
+    <defName>Angelic_Coagulate</defName>
+    <label>smear wounds</label>
+    <description>Use special glands in the tentacles to quickly tend someone's wounds. this will patch up wound and leave them covered in goo for several hours</description>
+    <iconPath>UI/Abilities/Ability_merp_coagulate</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    
+    <groupDef>applyslime</groupDef>
+    <aiCanUse>true</aiCanUse>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <warmupMote>Mote_CoagulateStencil</warmupMote>
+    <warmupEffecter>Coagulate</warmupEffecter>
+    <warmupStartSound>Coagulate_Cast</warmupStartSound>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <category>Sanguophage</category>
+    <displayOrder>400</displayOrder>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>true</canTargetBloodfeeders>
+      </targetParams>
+    </verbProperties>
+    <statBases>
+      <Ability_Duration>500</Ability_Duration>
+    </statBases>
+    <comps>
+      <li Class = "CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>AngelicCoveredInSlime</hediffDef>
+        <onlyBrain>false</onlyBrain>
+        <replaceExisting>true</replaceExisting>
+      </li>
+      <li Class="CompProperties_AbilityCoagulate">
+        <tendQualityRange>0.4~0.8</tendQualityRange>
+      </li>
+      <li Class="CompProperties_AbilityRequiresCapacity">
+        <capacity>Manipulation</capacity>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+
+
+  </Defs>

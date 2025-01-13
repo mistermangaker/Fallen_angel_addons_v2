@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+
+
+
+ <GeneDef ParentName="GeneEarsBase">
+    <defName>Angelic_fox_ears</defName>
+    <label>fox ears</label>
+    <description>Carriers of this gene have fox-like ears.</description>
+    <iconPath>UI/Genes/gene_fox_ears</iconPath>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Humanlike/BodyParts/Ears/shiri_ears</texPath>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
+        <useSkinShader>false</useSkinShader>
+        <colorType>Hair</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneTailBase">
+    <defName>Fox_tail_Furry</defName>
+    <label>fox tail</label>
+    <description>Carriers of this gene grow a fluffy tail which partially protects them from cold temperatures.</description>
+    <iconPath>UI/Genes/gene_foxtail</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>1120</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+    </statOffsets>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Humanlike/BodyParts/Tail/shiri_tail</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0.1, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.1, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+
+
+
+  <GeneDef ParentName="GeneHairStyleBase">
+    <defName>Angelic_hair_foxlike</defName>
+    <label>fox-haired</label>
+    <description>Carriers of this gene can only grow foxlike hair.</description>
+    <iconPath>UI/Genes/gene_shiri_hair</iconPath>
+    <displayOrderInCategory>56</displayOrderInCategory>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>shiri</li>
+      </tags>
+    </hairTagFilter>
+  </GeneDef>
+
+
+  
+  <GeneDef ParentName="GeneHeadboneBase">
+    <defName>Angelic_Headbone_MiniHorns</defName>
+    <label>occular horns</label>
+    <description>"you cant sneak up on me. have eyes on the back of my head"</description>
+    <iconPath>UI/Genes/gene_merp_horns</iconPath>
+    <statFactors>
+      <PsychicSensitivity>1.5</PsychicSensitivity>
+    </statFactors>
+    <biostatCpx>4</biostatCpx>
+    <biostatMet>-3</biostatMet>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.5</offset>
+      </li>
+    </capMods>
+    <missingGeneRomanceChanceFactor>0.8</missingGeneRomanceChanceFactor>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Humanlike/BodyParts/Horns/Angelic_occular_horns</texPath>
+        <color>(255, 255, 255)</color>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>horn</symbol></li>
+        <li><symbol>knob</symbol></li>
+        <li><symbol>spike</symbol></li>
+        <li><symbol>devil</symbol></li>
+        <li><symbol>demon</symbol></li>
+        <li><symbol>luci</symbol></li>
+        <li><symbol>beelze</symbol></li>
+        <li><symbol>hell</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+        <li><symbol>spike</symbol></li>
+        <li><symbol>vil</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+
+  <GeneDef ParentName="GeneTailBase">
+    <defName>void_tentacles</defName>
+    <label>void tentacles</label>
+    <description>very grippy and dexturous limbs. can be used as additional hands and greatly increases manipulation. the tentacles are extremely slimey and have healing properties</description>
+    <iconPath>UI/Genes/gene_tentacles</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>1120</displayOrderInCategory>
+    <biostatCpx>5</biostatCpx>
+    <biostatMet>-4</biostatMet>
+    <abilities>
+      <li>Angelic_Coagulate</li>
+      <li>Angelic_slimespray</li>
+      
+    </abilities>
+    <statOffsets>
+      <ComfyTemperatureMin>+10</ComfyTemperatureMin>
+      
+      <MeleeCooldownFactor>-0.3</MeleeCooldownFactor>
+    
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>2</offset>
+      </li>
+      <li>
+          <capacity>Moving</capacity>
+          <offset>0.2</offset>
+      </li>
+    </capMods>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Humanlike/BodyParts/Tentacles/Angelic_tentacles</texPath>
+        <color>(255, 255, 255)</color>
+        <drawSize>(1.2,1.2)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(0, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+
+
+  <GeneDef ParentName="GeneHairStyleBase">
+    <defName>Angelic_hair_void</defName>
+    <label>void being hair</label>
+    <description>Carriers of this gene can only grow foxlike hair.</description>
+    <iconPath>UI/Genes/gene_merp_hair</iconPath>
+    <displayOrderInCategory>56</displayOrderInCategory>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>merp</li>
+      </tags>
+    </hairTagFilter>
+  </GeneDef>
+
+
+    
+
+
+
+  </Defs>

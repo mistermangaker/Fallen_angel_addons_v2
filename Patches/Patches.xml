@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/FactionDef[defName="kindFallenangel"]/xenotypeSet/xenotypeChances</xpath>
+		<value>
+			<xenotypeChances>
+				<gremlins>0.05</gremlins>
+        <Baseliner>0.75</Baseliner>
+				<Fallen_angel>0.05</Fallen_angel>
+				<foxyfoxy>0.10</foxyfoxy>
+				<squidboi>0.05</squidboi>
+			</xenotypeChances>
+		</value>
+	</Operation>
+  	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/FactionDef[defName="meanFallenangel"]/xenotypeSet/xenotypeChances</xpath>
+		<value>
+			<xenotypeChances>
+				<gremlins>0.05</gremlins>
+        <Baseliner>0.75</Baseliner>
+				<Fallen_angel>0.05</Fallen_angel>
+				<foxyfoxy>0.10</foxyfoxy>
+				<squidboi>0.05</squidboi>
+			</xenotypeChances>
+		</value>
+	</Operation>
+
+
+	<Operation Class="PatchOperationAdd">
+	<success>Always</success>
+  <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+  <value>
+
+          <squidboi>0.05</squidboi>
+		  <foxyfoxy>0.02</foxyfoxy>
+		  <Fallen_angel>0.02</Fallen_angel>
+
+  </value>
+</Operation>
+
+	<Operation Class="PatchOperationAdd">
+
+  <xpath>/Defs/FactionDef[defName="kindFallenangel"]/pawnGroupMakers</xpath>
+  <value>
+
+    <li>
+        <!-- Normal fights, ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>150</commonality>
+        <options>
+          <fox_melee_basic>5</fox_melee_basic>
+          <Tribal_Warrior>5</Tribal_Warrior>
+          <Tribal_ChiefRanged>1</Tribal_ChiefRanged>
+          <fallenangel_ranged_basic>1</fallenangel_ranged_basic>
+          <fallenangel_ranged_mid>1</fallenangel_ranged_mid>
+          <fallenangel_explosive_mid>0.5</fallenangel_explosive_mid>
+        </options>
+      </li>
+
+  </value>
+</Operation>
+
+
+
+</Patch>

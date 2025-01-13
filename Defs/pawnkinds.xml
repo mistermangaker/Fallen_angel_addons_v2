@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef>
+    <defName>shiri</defName>
+    <race>Human</race>
+    <defaultFactionType>OutlanderCivil</defaultFactionType>
+    <chemicalAddictionChance>0.06</chemicalAddictionChance>
+    <fixedGender>Female</fixedGender>
+    <humanPregnancyChance>0.2</humanPregnancyChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <minGenerationAge>20</minGenerationAge>
+    <maxGenerationAge>34</maxGenerationAge>
+    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+
+    <techHediffsChance>0.1</techHediffsChance>
+    <techHediffsMoney>500~1000</techHediffsMoney>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+            <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+            <li>Tribal</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <techHediffsDisallowTags>
+      <li>PainCauser</li>
+    </techHediffsDisallowTags>
+    <xenotypeSet Inherit="False">
+        <xenotypeChances>
+            <foxyfoxy MayRequire="Ludeon.RimWorld.Biotech">999</foxyfoxy>
+        </xenotypeChances>
+    </xenotypeSet>
+    <apparelMoney>350~600</apparelMoney>
+     <apparelTags>
+      <li>Neolithic</li>
+      <li>MedievalMilitary</li>
+    </apparelTags>
+    <combatPower>10</combatPower>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>9~15</initialResistanceRange>
+    <requiredWorkTags>
+        <li>Violent</li>
+    </requiredWorkTags>
+        <apparelRequired>
+      <li>Apparel_shiri_bow</li>
+    </apparelRequired>
+    <weaponMoney>330~650</weaponMoney>
+    <weaponTags>
+      <li>MedievalMeleeBasic</li>
+      <li>NeolithicRangedDecent</li>
+    </weaponTags>
+  </PawnKindDef>
+
+
+    <PawnKindDef>
+    <defName>Merperoni</defName>
+    <label>merp</label>
+
+    <race>Human</race>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+          <squidboi MayRequire="Ludeon.RimWorld.Biotech">999</squidboi>
+      </xenotypeChances>
+    </xenotypeSet>
+    <defaultFactionType>OutlanderCivil</defaultFactionType>
+    <combatPower>50</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <maxGenerationAge>40</maxGenerationAge>
+    <isFighter>true</isFighter>
+      <fixedGender>Male</fixedGender>
+      <backstoryFiltersOverride>
+        <li>
+            <categoriesChildhood>
+                <li>Tribal</li>
+            </categoriesChildhood>
+            <categoriesAdulthood>
+                <li>Offworld</li>
+                <li>Outlander</li>
+                <li>Outsider</li>
+            </categoriesAdulthood>
+        </li>
+    </backstoryFiltersOverride>
+    <requiredWorkTags>
+        <li>Violent</li>
+        <li>Artistic</li>
+    </requiredWorkTags>
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <weaponMoney>1010~1500</weaponMoney>
+    <forceWeaponQuality>Masterwork</forceWeaponQuality>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+      <inventoryOptions>
+
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>shamia_pillow_two</thingDef>
+          <countRange>1</countRange>
+        </li>
+        <li>
+          <thingDef>shamia_pillow_one</thingDef>
+          <countRange>1</countRange>
+        </li>
+        <li>
+              <thingDef>paintingSmall</thingDef>
+              <countRange>1</countRange>
+          </li>
+      </subOptionsChooseOne>
+
+  </inventoryOptions>
+    <apparelMoney>500~1000</apparelMoney>
+    <apparelTags>
+      <li>Merp</li>
+    </apparelTags>
+
+            <apparelDisallowTags>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialMilitaryAdvanced</li>
+            <li>BeltDefenseTox</li>
+            <li>SpacerMilitary</li>
+            <li>BeltDefensePop</li>
+            <li>SpacerMilitary</li>
+        </apparelDisallowTags>
+   
+    <initialWillRange>0~0</initialWillRange>
+    <initialResistanceRange>0~2</initialResistanceRange>
+    <humanPregnancyChance>0</humanPregnancyChance>
+   
+  </PawnKindDef>
+
+
+  <PawnKindDef ParentName="TribalWarriorBase">
+    <defName>fox_melee_basic</defName>
+    <label>fox_melee_basic melee</label>
+    <combatPower>30</combatPower>
+    <weaponMoney>330~650</weaponMoney>
+    <xenotypeSet Inherit="False">
+        <xenotypeChances>
+            <foxyfoxy MayRequire="Ludeon.RimWorld.Biotech">999</foxyfoxy>
+        </xenotypeChances>
+    </xenotypeSet>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>MedievalMilitary</li>
+    </apparelTags>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+        <apparelRequired Inherit="False">
+      <li>Apparel_shiri_bow</li>
+    </apparelRequired>
+    <weaponTags>
+      <li>MedievalMeleeBasic</li>
+    </weaponTags>
+  </PawnKindDef>
+
+
+  </Defs>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<XenotypeIconDef>
+		<defName>Fallen_angel_icon3</defName>
+		<texPath>UI/Genes/Kitsune_xenotype</texPath>
+	</XenotypeIconDef>
+	<XenotypeIconDef>
+		<defName>Fallen_angel_icon4</defName>
+		<texPath>UI/Genes/gene_void_being_xenotype</texPath>
+	</XenotypeIconDef>
+
+
+
+
+	<XenotypeDef>
+    <defName>foxyfoxy</defName>
+    <label>kitsune</label>
+    <description>heh fluffy fluffy tail</description>
+    <iconPath>UI/Genes/Kitsune_xenotype</iconPath>
+	<factionlessGenerationWeight>80</factionlessGenerationWeight>
+    <inheritable>true</inheritable>
+    <genes>
+			<li>Angelic_hair_foxlike</li>
+			<li>Angelic_fox_ears</li>
+			<li>Fox_tail_Furry</li>
+
+			<li>PsychicAbility_Enhanced</li>
+			<li>NakedSpeed</li>
+			<li>MaxTemp_SmallDecrease</li>
+			<li>Sleepy</li>
+			<li>Libido_High</li>
+			<li>Fertile</li>
+			
+			<li>Body_Standard</li>
+			<li>Body_Thin</li>
+			<li>Hair_LightBlue</li>
+			<li>Hair_LightTeal</li>
+			<li>Hair_LightPurple</li>
+			<li>Skin_SheerWhite</li>
+			<li>StrongStomach</li>
+			<li>Learning_Slow</li>
+			<li>DarkVision</li>
+			<li>Hair_Grayless</li>
+			<li>Unstoppable</li>
+			<li>AptitudeRemarkable_Shooting</li>
+			<li>AptitudeTerrible_Construction</li>
+			<li>AptitudePoor_Mining</li>
+
+			<li MayRequire="void.charactereditor">SZBodySize_07</li>
+			<li MayRequire="void.charactereditor">SZBodySize_08</li>
+			<li MayRequire="void.charactereditor">SZBodySize_09</li>
+			<li MayRequire="void.charactereditor">SZBodySize_10</li>
+			<li MayRequire="void.charactereditor">SZBodySize_11</li>
+		</genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>squidboi</defName>
+    <label>Void Being</label>
+    <description>heh wiggly arms</description>
+    <iconPath>UI/Genes/gene_void_being_xenotype</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+			<li>Angelic_Headbone_MiniHorns</li>
+			<li>Angelic_hair_void</li>
+			<li>void_tentacles</li>
+
+
+			<li>WoundHealing_Slow</li>
+			<li>PsychicBonding</li>
+			<li>NakedSpeed</li>
+			<li>Mood_Pessimist</li>
+			<li>UVSensitivity_Mild</li>
+			<li>LowSleep</li>
+			<li>Delicate</li>
+			<li>Beard_NoBeardOnly</li>
+			<li>Body_Standard</li>
+			<li>Body_Thin</li>
+			<li>Hair_SnowWhite</li>
+			<li>Skin_SheerWhite</li>
+			<li>Learning_Fast</li>
+			<li>Nearsighted</li>
+			<li>DarkVision</li>
+			<li>Hair_Grayless</li>
+			
+			<li>AptitudeTerrible_Melee</li>
+			<li>AptitudeTerrible_Construction</li>
+			<li>AptitudeTerrible_Mining</li>
+			<li>AptitudeRemarkable_Artistic</li>
+			<li>AptitudeRemarkable_Medicine</li>
+			<li>AptitudeRemarkable_Intellectual</li>
+			<li>ChemicalDependency_Psychite</li>
+
+
+			<li MayRequire="void.charactereditor">SZBodySize_07</li>
+			<li MayRequire="void.charactereditor">SZBodySize_08</li>
+			<li MayRequire="void.charactereditor">SZBodySize_10</li>
+			<li MayRequire="void.charactereditor">SZBodySize_11</li>
+			
+		</genes>
+  </XenotypeDef>
+
+
+  </Defs>

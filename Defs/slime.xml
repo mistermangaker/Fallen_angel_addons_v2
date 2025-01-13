@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Angelic_slimespray</defName>
+    <label>fling slime</label>
+    <description>Spray thick globs of slime onto someone or somewhere. This ability can slow down indivividuals for a short time</description>
+    <iconPath>UI/Abilities/Ability_yeet_slime</iconPath>
+    <groupDef>applyslime</groupDef>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <warmupStartSound>FoamSpray_Warmup</warmupStartSound>
+    <hostile>false</hostile>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>4.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>FoamSpray_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilitySprayLiquid">
+        <projectileDef>Angelic_Proj_Foam_Ability</projectileDef>
+        <numCellsToHit>18</numCellsToHit>
+        <sprayEffecter>FoamSpray_Directional</sprayEffecter>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="AngelicProjectileFoamBase">
+    <defName>Angelic_Proj_Foam_Ability</defName>
+    <projectile>
+      <speed>25</speed>
+      <numExtraHitCells>0</numExtraHitCells>
+      <filthCount>1~3</filthCount>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Mote/FoamSpray</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>1.35</drawSize>
+    </graphicData>
+  </ThingDef>
+
+<ThingDef Name="AngelicProjectileFoamBase">
+    <defName>Angelic_Proj_slime</defName>
+    <label>slime</label>
+    <thingClass>Projectile_Liquid</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Things/Projectile/slime</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Angelic_Slime</damageDef>
+      <speed>27</speed>
+      <damageAmountBase>9999</damageAmountBase>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <shadowSize>0</shadowSize>
+      <filth>Filth_slime</filth>
+      <filthCount>1</filthCount>
+      <landedEffecter>ExtinguisherPuffSmall</landedEffecter>
+      <numExtraHitCells>4</numExtraHitCells>
+      <soundImpact>Foam_Impact</soundImpact>
+    </projectile>
+  </ThingDef>
+
+  <DamageDef>
+    <defName>Angelic_Slime</defName>
+    <label>extinguish</label>
+    <workerClass>DamageWorker_Extinguish</workerClass>
+    <canInterruptJobs>false</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <defaultDamage>999999</defaultDamage>
+    <hediff>AngelicCoveredInSlime</hediff>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+    <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+    <harmsHealth>false</harmsHealth>
+    <consideredHelpful>true</consideredHelpful>
+  </DamageDef>
+
+
+  <HediffDef>
+    <defName>AngelicCoveredInSlime</defName>
+    <description>Covered in a viscous slime.</description>
+    <label>covered in viscous slime</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <stages>
+      <li>
+      <statOffsets>
+          <CrawlSpeed>-0.2</CrawlSpeed>
+          <InjuryHealingFactor>0.1</InjuryHealingFactor>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.8</offset>
+          </li>
+        </capMods>
+
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1500~20000</disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>Filth_slime</defName>
+    <label>healing slime</label>
+    <statBases>
+      <Beauty>-25</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/Slime</texPath>
+	  <drawSize>1.75</drawSize>
+    </graphicData>
+    <filth>
+      <ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+      <disappearsInDays>5~10</disappearsInDays>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>100</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <allowsFire>false</allowsFire>
+      <cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThoughtDef>
+    <defName>Angelic_covered_in_slime</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>AngelicCoveredInSlime</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>covered in slime</label>
+        <description>Its so sticky.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  </Defs>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+	  <HairDef>
+    <label>Merp</label>
+    <styleGender>Any</styleGender>
+    <texPath>Hairs/merp</texPath>
+    <defName>merp</defName>
+    <styleTags>
+    <li>merp</li>
+      <li>Urban</li>
+      <li>Rural</li>
+    </styleTags>
+  </HairDef>
+  
+     <HairDef>
+    <label>Shiri</label>
+    <styleGender>Any</styleGender>
+    <texPath>Hairs/shiri</texPath>
+    <defName>shiri</defName>
+    <styleTags>
+    <li>shiri</li>
+      <li>Urban</li>
+      <li>Rural</li>
+    </styleTags>
+  </HairDef>
+
+
+  </Defs>
