@@ -13,7 +13,7 @@
       <drawSize>0.9</drawSize>
     </graphicData>
     <uiIconScale>1.15</uiIconScale>
-	<thingClass>Fallen_angel.NoColorApparel</thingClass>
+	
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
