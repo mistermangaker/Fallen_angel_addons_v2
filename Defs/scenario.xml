@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
    
-  <ScenarioDef>
+  <ScenarioDef ParentName="ScenarioBase">
     <defName>shamiaandfriends</defName>
     <label>shamia and friends</label>
     <description>Throughout the land there exist creatures that mimic angels in their appearance. These creatures are extremely charismatic and powerful. They form small cults surrounding themseleves. This is the story of one of those cults going out into the wilderness in search of a new home. </description>
